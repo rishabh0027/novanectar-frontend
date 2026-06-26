@@ -1,6 +1,16 @@
 import logo from "../assets/logo.png";
-import googleAds from "../assets/google-ads.png";
-import trackingCourse from "../assets/tracking-course.png";
+import seoCourse from "../assets/seo-course.png";
+import digitalmarketing from "../assets/digital-marketing.png"
+import googleAdsAI from "../assets/google-ads-ai.png";
+import metaAdsAI from "../assets/meta-ads-ai.png";
+import republicDayBundle from "../assets/republic-day-bundle.png";
+import ultimateComboBundle from "../assets/ultimate-combo-bundle.png";
+import allCoursesAccessBundle from "../assets/all-courses-access-bundle.png";
+import socialMediaMarketing from "../assets/social-media-marketing.png";
+import socialMediaManagement from "../assets/social-media-management.png";
+import googleMyBusiness from "../assets/google-my-business.png";
+import fullstackdevelopment from "../assets/full-stack-development.png";
+import artificialintelligence from "../assets/artificial-intelligence.png";
 import heroImage from "../assets/hero-image.png";
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
@@ -25,27 +35,45 @@ export const Route = createFileRoute("/")({
 /* ------------------------------ DATA ------------------------------ */
 
 const bundles = [
-  { title: "Republic Day Bundle (3 in 1)", tag: "Combo Package", old: "₹7,799", price: "₹5,500" },
-  { title: "Ultimate Combo Bundle (4 in 1)", tag: "Combo Package", old: "₹27,017", price: "₹15,999", featured: true },
-  { title: "All Courses Access (7 in 1)", tag: "Combo Package", old: "₹80,488", price: "₹33,000" },
+  {
+    title: "Republic Day Bundle (3 in 1)",
+    tag: "Combo Package",
+    old: "₹7,799",
+    price: "₹5,500",
+    image: republicDayBundle,
+  },
+  {
+    title: "Ultimate Combo Bundle (4 in 1)",
+    tag: "Combo Package",
+    old: "₹27,017",
+    price: "₹15,999",
+    featured: true,
+    image: ultimateComboBundle,
+  },
+  {
+    title: "All Courses Access (7 in 1)",
+    tag: "Combo Package",
+    old: "₹80,488",
+    price: "₹33,000",
+    image: allCoursesAccessBundle,
+  },
 ];
-
 const flagship = [
   {
-    title: "Advanced Tracking Course",
+    title: "Artificial Intelligence",
     rating: "5.0",
     reviews: 80,
     old: "₹6,000",
     price: "₹3,999",
-    image: trackingCourse,
+    image: artificialintelligence,
   },
   {
-    title: "Google Ads Course 2025",
+    title: "Full Stack Web Development",
     rating: "5.0",
     reviews: 39,
     old: "₹6,000",
     price: "₹4,199",
-    image: googleAds,
+    image: fullstackdevelopment,
   },
 ];
 
@@ -55,16 +83,76 @@ const newLaunches = [
   { title: "25 Mar '26 | Live Digital Marketing Course with AI — for Beginners", instructor: "Ankur Sir" },
 ];
 
-const allCourses = [
-  { title: "SEO Mastery Course — Recorded", rating: "5.0", reviews: 48, instructor: "Shivanshu Sir", old: "₹4,499", price: "₹3,499" },
-  { title: "Cohort 9 — Performance Marketing for D2C BootCamp", rating: "5.0", reviews: 47, instructor: "Shivanshu Sir & Sahil Sir", old: "₹30,000", price: "₹16,520" },
-  { title: "Digital Marketing Bootcamp 4.0", rating: "4.6", reviews: 53, instructor: "Shivanshu Sir", old: "₹45,000", price: "₹24,780" },
-  { title: "Google Ads Checklist + Media Buying Sheet + Calculators", rating: "4.8", reviews: 45, instructor: "Shivanshu Sir", old: "₹1,999", price: "₹799" },
-  { title: "Google Ads Course 2025 (Certified Advanced Course)", rating: "4.6", reviews: 180, instructor: "Shivanshu Sir / Sahil Sir", price: "₹4,199" },
-  { title: "Advanced Tracking Course (Become Tracking Expert)", rating: "5.0", reviews: 39, instructor: "Ankur Sir", price: "₹3,999" },
-  { title: "Data Analytics for Digital Marketers (Cohort 3)", rating: "5.0", reviews: 50, instructor: "Shivanshu Sir / Shiva Sir", old: "₹10,000", price: "₹8,000" },
-  { title: "Google Ads Advanced + Advanced Tracking Bundle", rating: "5.0", reviews: 48, instructor: "Shivanshu Sir", old: "₹15,000", price: "₹6,499" },
-  { title: "AI-Powered Shopify Development Course | Cohort-1", rating: "5.0", reviews: 45, instructor: "Shivanshu Sir", price: "₹4,720" },
+const courses = [
+  {
+    title: "SEO (Search Engine Optimization)",
+    duration: "2 months",
+    image: seoCourse,
+    price: "₹24,999",
+    oldPrice: "₹49,999",
+    description:
+      "NovaNectar SEO Mastery course: Learn powerful SEO techniques, keyword research, on-page and off-page optimization, and strategies to rank websites higher on Google.",
+  },
+
+  {
+    title: "Google Ads with AI",
+    duration: "2 months",
+    image: googleAdsAI,
+    price: "₹14,999",
+    oldPrice: "₹29,999",
+    description:
+      "NovaNectar Google Ads with AI course: Master Google Ads campaigns with smart automation, AI-powered targeting, and data-driven optimization to maximize ROI.",
+  },
+
+  {
+    title: "Meta Ads with AI",
+    duration: "2 months",
+    image: metaAdsAI,
+    price: "₹14,999",
+    oldPrice: "₹29,999",
+    description:
+      "NovaNectar Meta Ads with AI course: Learn how to create, manage, and optimize Facebook and Instagram ad campaigns using AI-powered automation, targeting, and performance tools.",
+  },
+
+  {
+    title: "Social Media Marketing",
+    duration: "2 months",
+    image: socialMediaMarketing,
+    price: "₹14,999",
+    oldPrice: "₹29,999",
+    description:
+      "NovaNectar Social Media Marketing course: Learn how to grow brands on Instagram, Facebook, YouTube, LinkedIn, and Twitter through content strategy, analytics, trends, and performance marketing.",
+  },
+
+  {
+    title: "Social Media Management",
+    duration: "2 months",
+    image: socialMediaManagement,
+    price: "₹14,999",
+    oldPrice: "₹29,999",
+    description:
+      "NovaNectar Social Media Management course: Learn how to plan, schedule, manage, and optimize social media content for brands across Instagram, Facebook, YouTube, LinkedIn, and more.",
+  },
+
+  {
+    title: "Google My Business",
+    duration: "2 months",
+    image: googleMyBusiness,
+    price: "₹14,999",
+    oldPrice: "₹29,999",
+    description:
+      "NovaNectar Google My Business (GMB) course: Learn how to optimize business listings, rank higher on Google Maps, manage reviews, and drive local customers using powerful local SEO strategies.",
+  },
+
+  {
+    title: "Digital Marketing",
+    duration: "2 months",
+    image: digitalmarketing,
+    price: "₹24,999",
+    oldPrice: "₹49,999",
+    description:
+      "NovaNectar Digital Marketing course: Learn comprehensive digital marketing strategies, including SEO, Google Ads, Meta Ads, and social media marketing to grow your online presence.",
+  }
 ];
 
 const advantages = [
@@ -110,20 +198,19 @@ const faqs = [
 
 function Logo() {
   return (
-    <a href="#top" className="flex items-center gap-3" aria-label="NovaNectar home">
+    <a
+      href="#top"
+      className="flex items-center"
+      aria-label="NovaNectar home"
+    >
       <img
         src={logo}
-        alt="NovaNectar Logo"
-        className="h-10 w-10 rounded-full"
+        alt="NovaNectar Learning Platform"
+        className="h-16 w-auto object-contain"
       />
-
-      <div className="hidden sm:block">
-        <p className="text-lg font-bold">NovaNectar</p>
-        <p className="text-xs text-gray-500">Learning Platform</p>
-      </div>
     </a>
   );
-}   // <-- THIS WAS MISSING
+} // <-- THIS WAS MISSING
 
 function Header() {
   const [open, setOpen] = useState(false);
@@ -133,7 +220,7 @@ function Header() {
         <Logo />
         <nav aria-label="Primary" className="hidden items-center gap-8 md:flex">
           <a href="#courses" className="text-sm font-medium text-foreground/80 hover:text-primary">Courses</a>
-          <a href="#bundles" className="text-sm font-medium text-foreground/80 hover:text-primary">Digital Products</a>
+          <a href="#bundles" className="text-sm font-medium text-foreground/80 hover:text-primary">Best Combos</a>
           <a href="#faculty" className="text-sm font-medium text-foreground/80 hover:text-primary">Faculty</a>
           <a href="#faq" className="text-sm font-medium text-foreground/80 hover:text-primary">FAQ</a>
         </nav>
@@ -288,37 +375,89 @@ function CourseThumb({
 
 function Flagship() {
   return (
-    <section id="courses" className="bg-background py-16 sm:py-20">
+    <section id="flagship" className="bg-background py-16 sm:py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <SectionHeading eyebrow="Result-Driven" title="Flagship" accent="Programs / Courses" sub="In-depth learning experiences designed to transform your career and business growth." />
-        <div className="grid gap-6 md:grid-cols-2">
+
+        <SectionHeading
+          eyebrow="Result-Driven"
+          title="Flagship"
+          accent="Programs / Courses"
+          sub="In-depth learning experiences designed to transform your career and business growth."
+        />
+
+        <div className="grid gap-8 md:grid-cols-2">
+
           {flagship.map((c) => (
-            <article key={c.title} className="overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition hover:-translate-y-1 hover:shadow-xl">
-              <CourseThumb
-  image={c.image}
-  label={c.title}
-/>
-              <div className="p-6">
-                <h3 className="text-lg font-bold text-foreground">{c.title}</h3>
-                <div className="mt-3 flex items-center gap-2 text-sm">
-                  <span className="flex items-center gap-1 text-amber-500" aria-label={`${c.rating} out of 5`}>
-                    {[...Array(5)].map((_, i) => <Star key={i} className="h-4 w-4 fill-current" aria-hidden="true" />)}
-                  </span>
-                  <span className="font-semibold text-foreground">{c.rating}</span>
-                  <span className="text-muted-foreground">({c.reviews} ratings)</span>
-                </div>
-                <p className="mt-2 text-sm font-medium text-muted-foreground">Umar Tazkeer</p>
-                <div className="mt-5 flex items-center justify-between">
-                  <div className="flex items-baseline gap-2">
-                    <span className="text-2xl font-extrabold text-foreground">{c.price}</span>
-                    <span className="text-sm text-muted-foreground line-through">{c.old}</span>
-                  </div>
-                  <button className="rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground hover:bg-primary/90">View Details</button>
-                </div>
+            <article
+              key={c.title}
+              className="group flex h-full flex-col overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
+            >
+
+              {/* Course Poster */}
+              <div className="relative aspect-[4/3] overflow-hidden bg-gray-100">
+
+                <img
+                  src={c.image}
+                  alt={c.title}
+                  className="h-full w-full object-contain transition duration-500 group-hover:scale-105"
+                />
+
+                <span className="absolute left-4 top-4 rounded-full bg-indigo-600 px-3 py-1 text-xs font-semibold text-white shadow">
+                  Flagship
+                </span>
+
               </div>
+
+              {/* Content */}
+              <div className="flex flex-1 flex-col p-6 min-h-[300px]">
+
+                <h3 className="text-2xl font-bold text-gray-900">
+                  {c.title}
+                </h3>
+
+                <div className="mt-3 flex items-center gap-3 text-sm text-gray-500">
+                  <span>⭐ {c.rating}</span>
+                  <span>•</span>
+                  <span>{c.reviews}+ Ratings</span>
+                </div>
+
+                <p className="mt-3 text-sm font-medium text-gray-500">
+                  👨‍🏫 Premium Instructor
+                </p>
+
+                <p className="mt-4 flex-grow text-[15px] leading-6 text-gray-600">
+                  Learn through real-world projects, live case studies, AI-powered tools, and industry-focused practical training.
+                </p>
+
+                {/* Price */}
+                <div className="mt-6 flex items-center gap-3">
+
+                  <span className="text-3xl font-bold text-black">
+                    {c.price}
+                  </span>
+
+                  <span className="text-red-500 line-through">
+                    {c.old}
+                  </span>
+
+                  <span className="rounded-full bg-green-100 px-2 py-1 text-xs font-semibold text-green-700">
+                    SAVE 40%
+                  </span>
+
+                </div>
+
+                {/* Button */}
+                <button className="mt-auto w-full rounded-xl bg-gradient-to-r from-indigo-600 to-blue-600 py-3 text-base font-semibold text-white transition duration-300 hover:from-indigo-700 hover:to-blue-700">
+                  VIEW DETAILS →
+                </button>
+
+              </div>
+
             </article>
           ))}
+
         </div>
+
       </div>
     </section>
   );
@@ -349,35 +488,96 @@ function NewLaunch() {
 
 function AllCourses() {
   return (
-    <section className="bg-background py-16 sm:py-20">
+    <section
+      id="courses"
+      className="bg-background py-16 sm:py-20"
+    >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <SectionHeading eyebrow="Library" title="All" accent="Courses" sub="From beginner foundations to advanced mastery — every program built to help you grow in digital marketing." />
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {allCourses.map((c) => (
-            <article key={c.title} className="flex flex-col rounded-2xl border border-border bg-card p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
-              <span className="self-start rounded-full bg-warning/20 px-2.5 py-0.5 text-[11px] font-bold uppercase tracking-wide text-warning-foreground">Best Seller</span>
-              <h3 className="mt-3 text-base font-bold leading-snug text-foreground">{c.title}</h3>
-              <div className="mt-2 flex items-center gap-1.5 text-sm">
-                <Star className="h-4 w-4 fill-amber-400 text-amber-400" aria-hidden="true" />
-                <span className="font-semibold">{c.rating}</span>
-                <span className="text-muted-foreground">({c.reviews})</span>
+
+        <SectionHeading
+          eyebrow="Library"
+          title="All"
+          accent="Courses"
+          sub="From beginner foundations to advanced mastery — every program built to help you grow in digital marketing."
+        />
+
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
+
+          {courses.map((course) => (
+            <article
+              key={course.title}
+              className="group flex h-full flex-col overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
+            >
+              {/* Poster */}
+              <div className="relative aspect-[4/3] overflow-hidden bg-gray-100">
+
+                <img
+                  src={course.image}
+                  alt={course.title}
+                  className="h-full w-full object-contain transition duration-500 group-hover:scale-105"
+                />
+
+                <span className="absolute left-4 top-4 rounded-full bg-indigo-600 px-3 py-1 text-xs font-semibold text-white shadow">
+                  AI Powered
+                </span>
+
               </div>
-              <p className="mt-1 text-sm text-muted-foreground">{c.instructor}</p>
-              <div className="mt-auto pt-4 flex items-baseline justify-between gap-2">
-                <div className="flex items-baseline gap-2 min-w-0">
-                  <span className="truncate text-xl font-extrabold text-foreground">{c.price}</span>
-                  {c.old && <span className="truncate text-xs text-muted-foreground line-through">{c.old}</span>}
+
+              {/* Card Content */}
+              <div className="flex flex-1 flex-col p-6 min-h-[360px]">
+
+                <h3 className="text-2xl font-bold text-gray-900">
+                  {course.title}
+                </h3>
+
+                <div className="mt-3 flex items-center gap-3 text-sm text-gray-500">
+                  <span>⭐ 4.9</span>
+                  <span>•</span>
+                  <span>1000+ Students</span>
                 </div>
-                <button className="shrink-0 rounded-full border border-primary px-3.5 py-1.5 text-xs font-semibold text-primary hover:bg-primary hover:text-primary-foreground transition">View</button>
+
+                <p className="mt-3 text-sm font-medium text-gray-500">
+                  ⏱ {course.duration}
+                </p>
+
+                <p className="mt-4 flex-grow text-[15px] leading-6 text-gray-600 line-clamp-3">
+                  {course.description}
+                </p>
+
+                {/* Price */}
+                <div className="mt-6 flex items-center gap-3">
+
+                  <span className="text-3xl font-bold text-black">
+                    {course.price}
+                  </span>
+
+                  <span className="text-red-500 line-through">
+                    {course.oldPrice}
+                  </span>
+
+                  <span className="rounded-full bg-green-100 px-2 py-1 text-xs font-semibold text-green-700">
+                    50% OFF
+                  </span>
+
+                </div>
+
+                {/* Button */}
+                <button
+                  className="mt-auto w-full rounded-xl bg-gradient-to-r from-indigo-600 to-blue-600 py-3 text-base font-semibold text-white transition duration-300 hover:from-indigo-700 hover:to-blue-700"
+                >
+                  VIEW DETAILS →
+                </button>
+
               </div>
             </article>
           ))}
+
         </div>
+
       </div>
     </section>
   );
 }
-
 function Advantages() {
   return (
     <section className="bg-surface py-16 sm:py-20">
@@ -559,7 +759,7 @@ function Contact() {
               <div className="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-primary-soft text-primary"><Phone className="h-5 w-5" aria-hidden="true" /></div>
               <div className="min-w-0">
                 <h3 className="text-sm font-bold uppercase tracking-wide text-muted-foreground">Contact Us</h3>
-                <p className="mt-1 text-sm text-foreground"><a href="tel:+919721410786" className="hover:text-primary">+91 7302622997</a>, <a href="tel:+919455076758" className="hover:text-primary">+91 94550 76758</a></p>
+                <p className="mt-1 text-sm text-foreground"><a href="tel:+917037050624" className="hover:text-primary">+91 7037050624</a>, <a href="tel:+917037050624" className="hover:text-primary">+91 7037050624</a></p>
               </div>
             </div>
             <div className="flex items-start gap-4 rounded-2xl border border-border bg-card p-6">
@@ -596,14 +796,14 @@ function FloatingContacts() {
   return (
     <div className="fixed bottom-6 right-4 z-40 flex flex-col gap-3 sm:right-6">
       <a
-        href="tel:+919721410786"
+        href="tel:+917037050624"
         aria-label="Call us"
         className="flex items-center gap-2 rounded-full bg-primary px-4 py-3 text-sm font-semibold text-primary-foreground shadow-lg hover:bg-primary/90"
       >
         <Phone className="h-4 w-4" aria-hidden="true" /> <span className="hidden sm:inline">Call us</span>
       </a>
       <a
-        href="https://api.whatsapp.com/send?phone=%2B919721410786"
+        href="https://api.whatsapp.com/send?phone=%2B917037050624"
         target="_blank"
         rel="noreferrer"
         aria-label="Chat on WhatsApp"
