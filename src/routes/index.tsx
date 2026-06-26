@@ -9,15 +9,35 @@ import allCoursesAccessBundle from "../assets/all-courses-access-bundle.png";
 import socialMediaMarketing from "../assets/social-media-marketing.png";
 import socialMediaManagement from "../assets/social-media-management.png";
 import googleMyBusiness from "../assets/google-my-business.png";
-import fullstackdevelopment from "../assets/full-stack-development.png";
-import artificialintelligence from "../assets/artificial-intelligence.png";
 import heroImage from "../assets/hero-image.png";
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import {
-  Menu, X, ShoppingCart, Phone, MessageCircle, Star, Sparkles,
-  Award, Users, Infinity as InfinityIcon, ClipboardCheck, GraduationCap, Trophy,
-  ChevronDown, MapPin, Mail, ArrowRight, Search, BarChart3
+  Menu,
+  X,
+  ShoppingCart,
+  Phone,
+  MessageCircle,
+  Star,
+  Sparkles,
+  Award,
+  Users,
+  Infinity as InfinityIcon,
+  ClipboardCheck,
+  GraduationCap,
+  Trophy,
+  ChevronDown,
+  MapPin,
+  Mail,
+  ArrowRight,
+  Search,
+  BarChart3,
+  Clock,
+
+  Facebook,
+  Instagram,
+  Linkedin,
+  Youtube
 } from "lucide-react";
 
 export const Route = createFileRoute("/")({
@@ -60,20 +80,20 @@ const bundles = [
 ];
 const flagship = [
   {
-    title: "Artificial Intelligence",
+    title: "Digital Marketing",
     rating: "5.0",
     reviews: 80,
     old: "₹6,000",
     price: "₹3,999",
-    image: artificialintelligence,
+    image: digitalmarketing,
   },
   {
-    title: "Full Stack Web Development",
+    title: "SEO (Search Engine Optimization)",
     rating: "5.0",
     reviews: 39,
     old: "₹6,000",
     price: "₹4,199",
-    image: fullstackdevelopment,
+    image: seoCourse,
   },
 ];
 
@@ -88,8 +108,8 @@ const courses = [
     title: "SEO (Search Engine Optimization)",
     duration: "2 months",
     image: seoCourse,
-    price: "₹24,999",
-    oldPrice: "₹49,999",
+    price: "₹4,199",
+    oldPrice: "₹6,000",
     description:
       "NovaNectar SEO Mastery course: Learn powerful SEO techniques, keyword research, on-page and off-page optimization, and strategies to rank websites higher on Google.",
   },
@@ -148,8 +168,8 @@ const courses = [
     title: "Digital Marketing",
     duration: "2 months",
     image: digitalmarketing,
-    price: "₹24,999",
-    oldPrice: "₹49,999",
+    price: "₹3,999",
+    oldPrice: "₹6,000",
     description:
       "NovaNectar Digital Marketing course: Learn comprehensive digital marketing strategies, including SEO, Google Ads, Meta Ads, and social media marketing to grow your online presence.",
   }
@@ -463,29 +483,6 @@ function Flagship() {
   );
 }
 
-function NewLaunch() {
-  return (
-    <section className="bg-surface py-16 sm:py-20">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <SectionHeading eyebrow="Just Dropped" title="New" accent="Launch" sub="Secure your seat early — limited spots fill up fast." />
-        <div className="grid gap-6 md:grid-cols-3">
-          {newLaunches.map((c, i) => (
-            <article key={c.title} className="group relative overflow-hidden rounded-2xl border border-border bg-card p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-xl">
-              <span className="absolute right-4 top-4 rounded-full bg-success/15 px-3 py-1 text-xs font-bold text-success">New</span>
-              <div className="mb-5 grid h-12 w-12 place-items-center rounded-xl bg-primary-soft text-primary font-bold">{i + 1}</div>
-              <h3 className="text-base font-bold leading-snug text-foreground">{c.title}</h3>
-              <p className="mt-2 text-sm text-muted-foreground">{c.instructor}</p>
-              <button className="mt-6 inline-flex items-center gap-1 text-sm font-semibold text-primary hover:gap-2 transition-all">
-                View Details <ArrowRight className="h-4 w-4" aria-hidden="true" />
-              </button>
-            </article>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
 function AllCourses() {
   return (
     <section
@@ -778,16 +775,232 @@ function Contact() {
 
 function Footer() {
   return (
-    <footer className="border-t border-border bg-surface py-10">
-      <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-4 sm:flex-row sm:px-6 lg:px-8">
-        <Logo />
-        <p className="text-xs text-muted-foreground">© {new Date().getFullYear()} NovaNectar. All rights reserved.</p>
-        <div className="flex items-center gap-4 text-xs text-muted-foreground">
-          <a href="#" className="hover:text-primary">Privacy</a>
-          <a href="#" className="hover:text-primary">Terms</a>
-          <a href="#" className="hover:text-primary">Refund Policy</a>
+    <footer className="bg-gradient-to-b from-slate-900 via-slate-950 to-black text-white">
+
+      {/* Main Footer */}
+      <div className="mx-auto max-w-7xl px-6 py-16">
+
+        <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
+
+          {/* Company */}
+          <div>
+            <img
+              src={logo}
+              alt="NovaNectar"
+              className="h-16 brightness-0 invert"
+            />
+
+            <p className="mt-5 text-sm leading-7 text-gray-400">
+              NovaNectar is a premium digital marketing learning platform
+              helping students and professionals master SEO, Google Ads,
+              Meta Ads, AI and Full Stack skills through practical learning.
+            </p>
+
+            <div className="mt-6 flex gap-3">
+
+              <a
+                href="https://facebook.com"
+                target="_blank"
+                rel="noreferrer"
+                className="rounded-full bg-slate-800 p-3 transition hover:bg-blue-600"
+              >
+                <Facebook size={20} />
+              </a>
+
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                rel="noreferrer"
+                className="rounded-full bg-slate-800 p-3 transition hover:bg-pink-600"
+              >
+                <Instagram size={20} />
+              </a>
+
+              <a
+                href="https://linkedin.com"
+                target="_blank"
+                rel="noreferrer"
+                className="rounded-full bg-slate-800 p-3 transition hover:bg-sky-600"
+              >
+                <Linkedin size={20} />
+              </a>
+
+              <a
+                href="https://youtube.com"
+                target="_blank"
+                rel="noreferrer"
+                className="rounded-full bg-slate-800 p-3 transition hover:bg-red-600"
+              >
+                <Youtube size={20} />
+              </a>
+
+            </div>
+          </div>
+
+          {/* Quick Links */}
+          <div>
+
+            <h3 className="mb-5 border-b border-slate-700 pb-2 text-lg font-bold">
+              Quick Links
+            </h3>
+
+            <ul className="space-y-3 text-gray-400">
+
+              <li>
+                <a href="#top" className="transition hover:translate-x-1 hover:text-indigo-400">
+                  Home
+                </a>
+              </li>
+
+              <li>
+                <a href="#all-courses" className="transition hover:translate-x-1 hover:text-indigo-400">
+                  Courses
+                </a>
+              </li>
+
+              <li>
+                <a href="#bundles" className="transition hover:translate-x-1 hover:text-indigo-400">
+                  Bundles
+                </a>
+              </li>
+
+              <li>
+                <a href="#faculty" className="transition hover:translate-x-1 hover:text-indigo-400">
+                  Faculty
+                </a>
+              </li>
+
+              <li>
+                <a href="#faq" className="transition hover:translate-x-1 hover:text-indigo-400">
+                  FAQs
+                </a>
+              </li>
+
+            </ul>
+
+          </div>
+
+          {/* Popular Courses */}
+          <div>
+
+            <h3 className="mb-5 border-b border-slate-700 pb-2 text-lg font-bold">
+              Popular Courses
+            </h3>
+
+            <ul className="space-y-3 text-gray-400">
+
+              <li>SEO Mastery</li>
+              <li>Google Ads with AI</li>
+              <li>Meta Ads with AI</li>
+              <li>Digital Marketing</li>
+              <li>Full Stack Development</li>
+              <li>Artificial Intelligence</li>
+
+            </ul>
+
+          </div>
+
+          {/* Contact */}
+          <div>
+
+            <h3 className="mb-5 border-b border-slate-700 pb-2 text-lg font-bold">
+              Contact
+            </h3>
+
+            <div className="space-y-4 text-gray-400">
+
+              <div className="flex items-center gap-3">
+                <MapPin size={18} className="text-indigo-400" />
+                <span>Dehradun, Uttarakhand</span>
+              </div>
+
+              <div className="flex items-center gap-3">
+                <Phone size={18} className="text-indigo-400" />
+                <span>+91 7037050624</span>
+              </div>
+
+              <div className="flex items-center gap-3">
+                <Mail size={18} className="text-indigo-400" />
+                <span>info@novanectar.co.in</span>
+              </div>
+
+              <div className="flex items-center gap-3">
+                <Clock size={18} className="text-indigo-400" />
+                <span>Mon – Sat : 10 AM – 7 PM</span>
+              </div>
+
+            </div>
+
+          </div>
+
         </div>
+
       </div>
+
+      {/* Newsletter */}
+      <div className="border-t border-slate-800 py-10">
+
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-6 md:flex-row">
+
+          <div>
+
+            <h3 className="text-2xl font-bold">
+              Stay Updated 🚀
+            </h3>
+
+            <p className="mt-2 text-gray-400">
+              Subscribe to receive the latest courses, offers and updates.
+            </p>
+
+          </div>
+
+          <div className="flex w-full max-w-md">
+
+            <input
+              type="email"
+              placeholder="Enter your email"
+              className="flex-1 rounded-l-xl bg-slate-800 px-4 py-3 text-white outline-none placeholder:text-gray-500"
+            />
+
+            <button className="rounded-r-xl bg-indigo-600 px-6 font-semibold transition hover:bg-indigo-700">
+              Subscribe
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      {/* Bottom Footer */}
+      <div className="border-t border-slate-800">
+
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 py-6 text-sm text-gray-400 md:flex-row">
+
+          <p>
+            © {new Date().getFullYear()} NovaNectar. All Rights Reserved.
+          </p>
+
+          <div className="flex gap-6">
+
+            <a href="#" className="transition hover:text-indigo-400">
+              Privacy Policy
+            </a>
+
+            <a href="#" className="transition hover:text-indigo-400">
+              Terms & Conditions
+            </a>
+
+            <a href="#" className="transition hover:text-indigo-400">
+              Refund Policy
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
     </footer>
   );
 }
@@ -827,7 +1040,6 @@ function Home() {
         <Hero />
         <Flagship />
         <Bundles />
-        <NewLaunch />
         <AllCourses />
         <Advantages />
         <Alumni />
