@@ -893,8 +893,8 @@ function Footer() {
               <li>Google Ads with AI</li>
               <li>Meta Ads with AI</li>
               <li>Digital Marketing</li>
-              <li>Full Stack Development</li>
-              <li>Artificial Intelligence</li>
+              <li>Social Media Management</li>
+              <li>Social Media Marketing</li>
 
             </ul>
 
@@ -926,7 +926,7 @@ function Footer() {
 
               <div className="flex items-center gap-3">
                 <Clock size={18} className="text-indigo-400" />
-                <span>Mon – Sat : 10 AM – 7 PM</span>
+                <span>Mon – Sat : 9 AM – 7 PM</span>
               </div>
 
             </div>
